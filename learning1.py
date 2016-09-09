@@ -93,4 +93,32 @@ def power(x, n = 2):
         s = s * x;
     return s;
 	
+def add_end(l = None):
+	if l is None:
+		l = [];
+	l.append('end');
+	return l;
 
+def calc(*number):
+	sum = 0;
+	for n in number:
+		sum += n * n;
+	return sum;
+
+def f1(a, b, c=0, *args, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'args =', args, 'kw =', kw)
+
+def f2(a, b, c=0, *, d, **kw):
+    print('a =', a, 'b =', b, 'c =', c, 'd =', d, 'kw =', kw)
+
+def fact(n):
+	if n == 1:
+		return 1;
+	return n * fact(n - 1);
+
+def fact1(n):
+	return fact_iter(n,1);
+def fact_iter(num,product):
+	if num == 1:
+		return product;
+	return fact_iter(num - 1, num * product);
